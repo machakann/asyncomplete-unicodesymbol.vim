@@ -1,9 +1,7 @@
 vim-asyncomplete-unicodesymbol.vim
 ==================================
 
-This is a completion source for [asyncomplete.vim](https://github.com/prabirshrestha/asyncomplete.vim) to convert a LaTeX-like sequence to a unicode symbol; for example `\alpha` to `α`.
-
-**!!!NOTE!!!** This plugin is a PoC for [a pull request](https://github.com/prabirshrestha/asyncomplete.vim/pull/120) for asyncomplete.vim. So, this plugin doesn't work without the patch.
+This is a completion source for [asyncomplete.vim v2](https://github.com/prabirshrestha/asyncomplete.vim/pull/124) to convert a LaTeX-like sequence to a unicode symbol; for example `\alpha` to `α`.
 
 ## Requirement
 

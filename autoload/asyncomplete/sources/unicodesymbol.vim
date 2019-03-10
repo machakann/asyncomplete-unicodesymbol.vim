@@ -1,10 +1,9 @@
-function! asyncomplete#sources#unicodesymbol#get_source_options(opt)
-    let a:opt['filter'] = function('s:filter_candidates')
+function! asyncomplete#sources#unicodesymbol#get_source_options(opt) abort
     return a:opt
 endfunction
 
 
-function! asyncomplete#sources#unicodesymbol#completor(opt, ctx)
+function! asyncomplete#sources#unicodesymbol#completor(opt, ctx) abort
     if !exists('s:symbols')
         let s:symbols = s:make_dictionary()
         call asyncomplete#log('cached symbols')
@@ -22,15 +21,6 @@ function! asyncomplete#sources#unicodesymbol#completor(opt, ctx)
     endif
 
     call asyncomplete#complete(a:opt['name'], a:ctx, l:startcol + 1, l:symbols)
-endfunction
-
-
-function! s:filter_candidates(prefix, matches) abort
-    if strlen(a:prefix) < 2
-        return []
-    endif
-    let l:pat = '^' . s:escape(a:prefix)
-    return filter(copy(a:matches), 'v:val.menu =~# l:pat')
 endfunction
 
 

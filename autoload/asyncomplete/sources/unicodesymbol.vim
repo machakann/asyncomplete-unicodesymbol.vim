@@ -1,5 +1,5 @@
 function! asyncomplete#sources#unicodesymbol#get_source_options(opt) abort
-    return a:opt
+    return extend(a:opt, {'refresh_pattern': '\\$'})
 endfunction
 
 

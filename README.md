@@ -17,10 +17,11 @@ Add lines into your vimrc. `asyncomplete-ezfilter.vim` is recommended to use, be
 ```vim
 let g:asyncomplete_preprocessor = [function('asyncomplete#preprocessor#ezfilter#filter')]
 
-autocmd User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#unicodesymbol#get_source_options({
-  \ 'name': 'unicodesymbol',
-  \ 'whitelist': ['julia'],
-  \ 'completor': function('asyncomplete#sources#unicodesymbol#completor'),
+autocmd User asyncomplete_setup call asyncomplete#register_source(
+  \ asyncomplete#sources#unicodesymbol#get_source_options({
+  \   'name': 'unicodesymbol',
+  \   'whitelist': ['julia'],
+  \   'completor': function('asyncomplete#sources#unicodesymbol#completor'),
   \ }))
 
 let g:asyncomplete#preprocessor#ezfilter#config = {}

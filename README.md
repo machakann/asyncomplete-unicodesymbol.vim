@@ -8,6 +8,7 @@ This is a completion source for [asyncomplete.vim v2](https://github.com/prabirs
 ## Requirement
 
  - [julia-vim](https://github.com/JuliaEditorSupport/julia-vim)
+ - [asyncomplete.vim](https://github.com/prabirshrestha/asyncomplete.vim)
  - [asyncomplete-ezfilter.vim](https://github.com/machakann/asyncomplete-ezfilter.vim)  (not essential but recommended)
 
 ## Usage
